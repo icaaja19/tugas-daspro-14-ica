@@ -1,7 +1,8 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from polls import views
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('polls.urls')),
+urlpatterns= [
+    path('', views.index, name='index'),
+    path('address/', views.address_view, name='address'),
+    path('phone/', views.phone_view, name='phone')
 ]
